@@ -1,22 +1,15 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:21-alpine'
-        }
+    agent any
+
+    triggers {
+       cron('* * * * *')  
     }
+
     stages {
         stage('build'){ 
             steps {
-                sh 'npm -v'
+                echo 'build !'
             }
-        }
-    }
-    post {
-        always {
-            echo 'This will always run'
-        }
-        success {
-            echo 'This will run only if successful'
         }
     }
 }
