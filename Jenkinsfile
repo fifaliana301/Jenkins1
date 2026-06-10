@@ -2,10 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Build'){
+        stage('build'){
             steps {
-                echo 'echo hello > world.txt'
-                archiveArtifacts(artifacts: '*.txt')
+               sh 'gradle -v'
             }
         }
     }
