@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         gradle 'gradle9.6'
-        nodejs 'node26'
+        nodejs 'node22' 
     }
 
     stages {
